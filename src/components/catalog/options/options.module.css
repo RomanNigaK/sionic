@@ -1,0 +1,50 @@
+.options{
+    position: absolute;
+
+
+   margin-top: -20px;
+}
+.body{
+    margin-top: 20px;
+    background-color: white;
+    border:1px solid black;
+    padding: 15px;
+    color: black;
+    border-radius: 5px;
+}
+.header{
+    font-size: 14pt;
+    font-weight: 500;
+    display: flex;
+    justify-content: space-between
+}
+.field{
+    margin-left: 10px;
+    margin-right: 10px;
+    
+}
+.btn{
+    display: flex;
+   
+    justify-content: center;
+    align-items: center;
+    height: 40px;
+    width: 100px;
+    background-color: #2967FF;
+    border-radius: 40px;
+    margin-top: 10px;
+    color: white;
+    cursor: pointer;
+}
+.field select{
+    padding: 5px;
+    margin-top: 5px;
+    margin-bottom: 15px;
+}
+.nameWindow{
+    display: flex;
+    justify-content: space-between;
+   
+    width: 100%;
+}
+

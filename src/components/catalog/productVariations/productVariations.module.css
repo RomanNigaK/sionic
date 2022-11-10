@@ -1,0 +1,22 @@
+.list{
+   
+        position: absolute;
+        border:1px solid black;
+       
+        margin-top: -30px;
+        margin-left: -200px;
+        background-color: white;
+        display: flex;
+
+}
+.content{
+    background-color: white;
+}
+.list:hover{
+    color:red;
+    background-color: white;
+}
+.boxproduct{
+    border:1px solid black;
+    width: 100%;
+}

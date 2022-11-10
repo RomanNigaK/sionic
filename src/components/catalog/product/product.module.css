@@ -1,0 +1,54 @@
+.product {
+    width: 269px;
+    margin-top: 50px;
+    
+    
+}
+
+.imgProduct {
+   
+    height: 200px;
+
+}
+.imgproduct{
+    text-align: center;
+    height: 200px;
+    background: transparent url('./../../../../public/preloader.gif') center no-repeat;
+}
+.price {
+    font-family: 'Raleway';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 130%;
+    color: #2967FF;
+    margin-left: 20px;
+}
+.btnaddbasket{
+   
+    height: 50px;
+    border-radius: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #2967FF;
+    border: 1px solid #2967FF;
+    font-size: 14pt;
+    margin-top: 20px;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+.name{
+    margin-left: 20px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.btnaddbasket:hover{
+    color: white;
+    background-color:  #2967FF;
+    cursor: pointer;
+}
+.loading {
+    
+  }

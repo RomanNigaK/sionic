@@ -1,0 +1,83 @@
+.delivery{
+    margin-left: 50px;
+}
+.datatime{
+    display: flex;
+}
+.datatime div{
+    margin-right: 10px;
+}
+.header{
+    font-size: 18pt;
+    font-weight: bold;
+    margin-bottom: 50px;
+}
+
+.adres{
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border:1px solid #F0F4FB;
+    border-radius: 25px;
+    padding-left: 15px;
+    padding-right: 5px;
+    width: 400px;
+}
+.inputNumber{
+    padding-left: 5px;
+}
+.adres input{
+    border: none;
+    width: 350px;
+    font-size: 12pt;
+    
+}
+
+.adres input:focus {
+    outline: none;
+}
+.summa{
+    
+    background-color: #F0F4FB;
+    width: 350px;
+    border-radius: 10px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    font-size: 14pt;
+    
+
+}
+.summa div{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 5px;
+}
+.body{
+    display: flex;
+    align-items: flex-start;
+}
+.aboutorder{
+    padding-left: 100px;
+}
+.btnorder{
+    background-color: #2967FF;
+    width: 270px;
+    color: white;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-left: 40px;
+    padding-right: 40px;
+    border-radius: 50px;
+    margin-top: 50px;
+    font-size: 16pt;
+    }
+
+    .err{
+        color: red;
+        text-align: center;
+        padding: 10px;
+    }

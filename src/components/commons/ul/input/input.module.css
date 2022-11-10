@@ -1,0 +1,29 @@
+.boxInput{
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border:1px solid #F0F4FB;
+    border-radius: 25px;
+    padding-left: 15px;
+    padding-right: 5px;
+    width: 400px;
+}
+.inputerror{
+    border:1px solid red;
+}
+.boxInput input{
+    border: none;
+    width: 350px;
+    font-size: 12pt;
+    
+}
+.boxInput input:focus {
+    outline: none;
+}
+.error{
+    color: red;
+    margin-top: 10px;
+    margin-left: 20px;
+    margin-bottom: 10px;
+}

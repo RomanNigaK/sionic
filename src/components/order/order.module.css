@@ -1,0 +1,79 @@
+.order{
+    margin-left: 50px;
+}
+.header{
+    font-size: 18pt;
+    font-weight: bold;
+    margin-bottom: 50px;
+}
+.body{
+    display: flex;
+    align-items: flex-start;
+    flex-wrap: wrap;
+}
+
+.orderitem{
+    border: 1px solid #AEC2EA;
+    border-radius: 32px;
+    width: 500px;
+    padding: 20px;
+    padding-bottom: 20px;
+    margin-right: 10px;
+    margin-bottom: 10px;
+
+}
+.headerItem{
+    display: flex;
+    justify-content: space-between;
+}
+.line1{
+    display: flex;
+    justify-content: start;
+    align-items: flex-end;
+}
+.img img{
+    width: 70px;
+    height: 70px;
+    border-radius: 50px;
+}
+
+.nameheader{
+    margin-left: 10px;
+    display:block
+}
+.otherDetails{
+    margin-left: 10px;
+    color:#2967FF;
+}
+.detailed{
+    margin-right: 10px;
+}
+.statusNomer{
+    margin-top: 10px;
+}
+.statusNomer, .otherdata{
+    display: flex;
+}
+.statusNomer div, .otherdata div{
+    margin-right: 10px;
+}
+.headerBlock{
+    color:#727280;
+    font-size: 10pt;
+}
+.datadetails{
+    display: flex;
+}
+.boximg{
+    width: 70px;
+    height: 70px;
+    border-radius: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+}
+.boximg img{
+    width: 40px;
+    height: 40px;
+}

@@ -1,0 +1,33 @@
+.preloaderBox img{
+    width: 30px;
+}
+.preloaderBox{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 200px;
+    margin-top: 25px;
+}
+.preloaderBoxMax{
+    display: flex;
+    justify-content: center;
+    
+    align-items: center;
+}
+
+.preloaderBoxMin{
+    display: flex;
+
+}
+.preloaderBoxMin img{
+    width: 20px;
+    height: 20px;
+    margin: 0;
+    padding: 0;
+}
+.textPreloader{
+    color:#2967FF;
+}
+.box{
+    text-align: center;
+}

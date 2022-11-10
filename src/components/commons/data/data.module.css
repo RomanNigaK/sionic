@@ -1,0 +1,80 @@
+.data{
+    position: absolute;
+    width: 300px;
+    height: 300px;
+    padding: 5px;
+    border: 1px solid #AEC2EA;
+    background-color: white;
+    border-radius: 5px;
+
+
+}
+
+.header{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    border-bottom: 1px solid #AEC2EA;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    
+}
+.month{
+margin-left: 50px;
+}
+.body{
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    flex-wrap: wrap;
+    padding-top: 10px;
+    height: 200px;
+
+}
+.monthday{
+    width: 31px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+.monthday:hover{
+    background-color: #e1e1e1;
+}
+
+.yearmonths{
+    width: 85px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+.yearmonths:hover{
+    background-color: #e1e1e1;
+}
+
+
+.centuryyears{
+    width: 135px;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+.centuryyears:hover{
+    background-color: #e1e1e1;
+}
+
+.result{
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18pt;
+    font-weight:400;
+    
+
+}

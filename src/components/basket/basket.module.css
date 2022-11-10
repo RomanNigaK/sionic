@@ -1,0 +1,94 @@
+
+.body{
+    border:1px solid #AEC2EA;
+    border-radius: 10px;  
+}
+.basket{
+    margin-left: 50px;
+}
+.header{
+    display: flex;
+    
+    align-items: center;
+}
+.h{
+    font-size: 20pt;
+    font-weight: 700;
+}
+.options{
+    margin-left: 100px;
+    color: red;
+    cursor: pointer;
+}
+.headeritems{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 80px;
+    border-bottom:1px solid #AEC2EA;
+    border-radius: 10px;
+}
+.image{
+    height: 100%;
+}
+.image img{
+    height:inherit;
+}
+.btnorder{
+background-color: #2967FF;
+color: white;
+height: 50px;
+display: flex;
+justify-content: center;
+align-items: center;
+padding-left: 40px;
+padding-right: 40px;
+border-radius: 50px;
+}
+
+.items{
+    margin:10px;
+}
+.item{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
+.item div{
+    margin: 10px;
+}
+
+.imageItem img{
+    width: 70px;
+}
+.aboutitem{
+    width: 300px;
+}
+
+/* иконка удаления из списка корзины */
+.deleteitem img{
+    cursor: pointer;
+}
+
+/* количество товара */
+.quantity{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 150px;
+    border:1px solid #AEC2EA;
+    height: 40px;
+    border-radius: 40px;
+    padding-left: 10px;;
+    padding-right: 10px;
+    font-size: 12pt;
+}
+
+.increase, .reduce{
+    font-size: 20pt;
+}
+.option{
+    font-size: 10pt;
+}
+

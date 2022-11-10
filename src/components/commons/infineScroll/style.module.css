@@ -1,0 +1,21 @@
+.infinescroll{
+ display: flex;
+ justify-content: center;
+ align-items: center;
+ margin-top: 40px;
+}
+.moreproducts{
+    width: 400px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #F0F4FB;
+    border-radius: 50px;
+    font-size: 14pt;
+    cursor: pointer;
+
+}
+.moreproducts:hover{
+    background: #a6a9ae;
+}

@@ -24,7 +24,7 @@ margin-left: 50px;
 }
 .body{
     display: flex;
-    justify-content: start;
+    justify-content: flex-start;
     align-items: center;
     flex-wrap: wrap;
     padding-top: 10px;

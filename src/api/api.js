@@ -11,7 +11,7 @@ export const apiSionic = {
         let q = range ? range[1] - 1 : 9;
         console.log(sort)
         const res = await fetch(URL + `/Products?filter={"category_id":${idCategory}}&range=[${s},${q}]&sort=["${sort[0]}","${sort[1]}"]`);
-        
+
         const data = await res.json();
         return data;
     },
@@ -25,7 +25,7 @@ export const apiSionic = {
             allData = allData.concat(data);
             range = [range[0] + 50, range[1] + 50];
 
-        } while (data.length == 50);
+        } while (data.length === 50);
         return allData;
     },
     async getProductVariations(idProduct) {
@@ -37,7 +37,7 @@ export const apiSionic = {
             data = await res.json();
             allData = allData.concat(data);
             range = [range[0] + 50, range[1] + 50];
-        } while (data.length == 50);
+        } while (data.length === 50);
         return allData;
     },
     async getProductVariationsId(id) {

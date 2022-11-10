@@ -10,7 +10,7 @@ import { addProductVariations } from "../../redux/models/ProductVariation";
 import { addImages } from "../../redux/models/Image";
 import Preloader from "../commons/Preloader";
 import InfineScroll from "../commons/infineScroll/InfineScroll";
-import { setErrorApp, setIsLoadMoreProducts, setRange, setStartRange } from "../../redux/appSlice";
+import { setErrorApp, setIsLoadMoreProducts } from "../../redux/appSlice";
 import Error from "../commons/error/Error";
 import Options from "./options/Options";
 
@@ -20,29 +20,21 @@ const Catalog = (props) => {
     const range = useSelector(state => state.app.range);
     const sort = useSelector(state => state.app.sort);
     const categories = props.categories;
-
     const products = useSelector(state => productsCategory(state, props.idCategory));
-    
-
-
     const viewCatygory = useSelector(state => state.app.viewCatygory);
     const errorApp = useSelector(state => state.app.errorApp);
     const [isOption, setIsOption] = useState(false);
     const isLoadMore = useSelector(state => state.app.isLoadMoreProducts);
-
     async function loadProducsData(r, s) {
-
         try {
             let products = await apiSionic.getProducts(props.idCategory, r ? r : range, s).
                 catch(err => { throw 'Не удаеться загрузить список товаров...' });
-
             let ids = [];
             products.forEach(el => {
                 ids.push(el.id)
             })
             let imagesProduct = await apiSionic.getImagesProduct(ids);
             let productVariations = await apiSionic.getProductVariations(ids);
-
             Promise.all([imagesProduct, productVariations]).
                 then(values => {
                     dispatch(addImages(values[0]))
@@ -56,9 +48,7 @@ const Catalog = (props) => {
     }
 
     useEffect(() => {
-
         loadProducsData(range, sort);
-
     }, [viewCatygory, sort, range])
 
     let listProducts;
@@ -89,7 +79,7 @@ const Catalog = (props) => {
                             listProducts : <Preloader max text="Загружаем список товаров" />}
                 </div>
             </div>
-            <InfineScroll isLoad={isLoadMore} quantityProductsInORM={products?products.length:0}/>
+            <InfineScroll isLoad={isLoadMore} quantityProductsInORM={products ? products.length : 0} />
         </>
     )
 };

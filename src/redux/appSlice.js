@@ -4,9 +4,6 @@ export const appSlice = createSlice({
     name: 'app',
     initialState: {
         toggleShowVariationsPdiduct: false,
-
-
-
         idCategory: 1,
         initialApp: false,
         quntytiViewItemsProducts: 20,
@@ -15,10 +12,10 @@ export const appSlice = createSlice({
         sort: ["name", "ASC"],
         listVariation: null,
         isShowVariantions: false,
-        errorApp:false,
-        isOption:false,
-        isLoadMoreProducts:true,
-   
+        errorApp: false,
+        isOption: false,
+        isLoadMoreProducts: true,
+
 
     },
     reducers: {
@@ -28,11 +25,11 @@ export const appSlice = createSlice({
         }),
         setIdCategory: ((state, action) => {
             state.idCategory = action.payload;
-            state.range=[0,state.quntytiViewItemsProducts];
+            state.range = [0, state.quntytiViewItemsProducts];
             if (!~state.viewCatygory.indexOf(action.payload)) {
                 console.log('add')
                 state.viewCatygory.push(action.payload);
-                
+
             }
 
         }),
@@ -43,7 +40,7 @@ export const appSlice = createSlice({
             state.quntytiViewItemsProducts = action.payload;
         },
         setRange: (state) => {
-        
+
             state.range = [state.range[0] + state.quntytiViewItemsProducts, state.range[1] + state.quntytiViewItemsProducts];
             console.log(state.range);
         },
@@ -58,30 +55,27 @@ export const appSlice = createSlice({
             state.listVariation = null;
             state.isShowVariantions = false;
         },
-        setErrorApp:(state,action)=>{
-           
-            state.errorApp=action.payload;
+        setErrorApp: (state, action) => {
+
+            state.errorApp = action.payload;
         },
-        showOption:(state)=>{
-            state.isOption=true;
+        showOption: (state) => {
+            state.isOption = true;
         },
-        hideOption:(state)=>{
-           
-            state.isOption=false;
+        hideOption: (state) => {
+
+            state.isOption = false;
         },
-        setSort:(state,action)=>{
+        setSort: (state, action) => {
             console.log(action)
-            state.sort = ["name",action.payload]
+            state.sort = ["name", action.payload]
         },
-        setIsLoadMoreProducts:(state,action)=>{
-            state.isLoadMoreProducts=action.payload;
+        setIsLoadMoreProducts: (state, action) => {
+            state.isLoadMoreProducts = action.payload;
         },
-        setStartRange:(state,action)=>{
+        setStartRange: (state, action) => {
             state.range = action.payload;
         }
-
-
-
     }
 });
 
@@ -93,10 +87,10 @@ export const setNewRange = () => (dispatch) => {
     dispatch(setRange());
 
 }
-export const hideOptionThunk=()=>(dispatch)=>{
+export const hideOptionThunk = () => (dispatch) => {
     dispatch(hideOption());
 }
 
-export const { setStartRange,setIsLoadMoreProducts,setSort,showOption, hideOption, setErrorApp ,clearListVariation, setListVariation, setCurrentItem, setIdCategory, setInitialApp, setQuntytiViewItemsProducts, setRange, seTtogleShowVariationsPdiduct } = appSlice.actions
+export const { setStartRange, setIsLoadMoreProducts, setSort, showOption, hideOption, setErrorApp, clearListVariation, setListVariation, setCurrentItem, setIdCategory, setInitialApp, setQuntytiViewItemsProducts, setRange, seTtogleShowVariationsPdiduct } = appSlice.actions
 
 export default appSlice.reducer

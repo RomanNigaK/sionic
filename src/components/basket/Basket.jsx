@@ -15,11 +15,11 @@ const Basket = () => {
     const dispatch = useDispatch();
     const basketOrm = useSelector(state => basketItems(state));
     const [isLoad, setIsLoad] = useState(false);
-    const sum = useSelector(state=>sumBasket(state));
+    const sum = useSelector(state => sumBasket(state));
 
 
     function deleteItemBasket(index) {
-       
+
         dispatch(deleteItemOrm(index));
     }
 
@@ -27,9 +27,9 @@ const Basket = () => {
 
 
     useEffect(() => {
-        if(basketOrm.length>0){
+        if (basketOrm.length > 0) {
             g();
-        }else{
+        } else {
             setIsLoad(true);
         }
         async function g() {
@@ -57,7 +57,7 @@ const Basket = () => {
 
 
         }
-        
+
 
 
     }, []);
@@ -74,7 +74,7 @@ const Basket = () => {
 
 
         return (<>
-            <div className={s.item} key={el.id+'basket'}>
+            <div className={s.item} key={el.id + 'basket'}>
                 <div className={s.imageItem}>
                     <img src={`https://test2.sionic.ru/img/products/${el.image_name}`}
                         all={`${el.image_name}`} />
@@ -89,7 +89,7 @@ const Basket = () => {
                 </div>
                 <div className={s.quantity}>
                     <div className={s.increase}><img src="minus.png" alt=""
- 
+
                         onClick={() => dispatch(dec(el.id))} /></div>
                     <div className={s.value}>
                         {el.quantity}
@@ -111,7 +111,7 @@ const Basket = () => {
         <div className={s.basket}>
             <div className={s.header}>
                 <div className={s.h}>Корзина</div>
-                <div className={s.options} onClick={()=>dispatch(deleteBasket())}>Очистить корзину</div>
+                <div className={s.options} onClick={() => dispatch(deleteBasket())}>Очистить корзину</div>
             </div>
             <div className={s.body}>
                 <div className={s.headeritems}>
@@ -121,7 +121,7 @@ const Basket = () => {
                     <div className={s.fullprice}>
                         Стоимость корзины:
                         <br></br>
-                        {isNaN(sum)?0:sum} &#8381;
+                        {isNaN(sum) ? 0 : sum} &#8381;
                     </div>
                     <NavLink to="/delivery"><div className={s.btnorder}>Оформить</div></NavLink>
                     <div className={s.image}>
@@ -129,8 +129,8 @@ const Basket = () => {
                     </div>
                 </div>
                 <div className={s.items}>
-                  
-                    {basketOrm.length==0?'Корзина пуста':isLoad ? items : <Preloader />}
+
+                    {basketOrm.length == 0 ? 'Корзина пуста' : isLoad ? items : <Preloader />}
                 </div>
 
             </div>

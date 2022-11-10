@@ -1,16 +1,10 @@
 import React from "react";
 import { useSelector } from "react-redux";
-import { NavLink, Outlet, useSearchParams } from "react-router-dom";
-import { basketItems, basketQuantity } from "../../redux/orm/selectors";
+import { NavLink, Outlet } from "react-router-dom";
+import { basketQuantity } from "../../redux/orm/selectors";
 import s from './layout.module.css';
 const Layout = () => {
-
-
-
-
-
     const basketQuantityItems = useSelector(state => basketQuantity(state));
-
     return (
         <>
             <div className={s.layout}>
@@ -45,23 +39,18 @@ const Layout = () => {
                                 </div>
                             </NavLink>
                             <div className={s.profile}>
-
                             </div>
                         </div>
-
-
                     </div>
-                    <div className={s.content} onScroll={(e)=>console.log('dfgf')}>
+                    <div className={s.content} onScroll={(e) => console.log('dfgf')}>
                         <Outlet />
                     </div>
-
                 </div>
                 <div className={s.sidepanel}>
-                    <img src="baner1.jpg" />
-                    <img src="baner2.jpg" />
-                    <img src="baner3.jpg" />
+                    <img src="baner1.jpg" alt="baner"/>
+                    <img src="baner2.jpg" alt="baner"/>
+                    <img src="baner3.jpg" alt="baner"/>
                 </div>
-
             </div>
             <div className={s.footer}>
                 <div className={s.line1}>
@@ -74,33 +63,28 @@ const Layout = () => {
                                 Присоеденяйтесь к нам
                             </div>
                             <div className={s.imgseti}>
-                                <img src="Facebook.png"/>
-                                <img src="Inst.png"/>
-                                <img src="Vk.png"/>
+                                <img src="Facebook.png" alt="facebook"/>
+                                <img src="Inst.png" alt="inst"/>
+                                <img src="Vk.png" alt="vk"/>
                             </div>
                         </div>
                         <div className={s.app}>
-                        <div className={s.text}>
+                            <div className={s.text}>
                                 Присоеденяйтесь к нам
                             </div>
                             <div className={s.imgseti}>
-                                <img src="Google Play.png"/>
-                                <img src="App Store.png"/>
-                               
+                                <img src="Google Play.png" alt="Google Play"/>
+                                <img src="App Store.png" alt="App Store"/>
                             </div>
                         </div>
                     </div>
-
                 </div>
                 <div className={s.line2}>
                     <div>© Sionic</div>
                     <div>Правовая информация</div>
                     <div>Политика конфиденциальности</div>
                 </div>
-
             </div>
-
-
         </>
     )
 };

@@ -10,40 +10,35 @@ const Time = (props) => {
 
     const hoursDiv = hours.map(el => {
         return (
-            <div className={s.hourdiv} onClick={()=>choiseHour(el)}>{el}</div>
+            <div className={s.hourdiv} onClick={() => choiseHour(el)}>{el}</div>
         )
     })
     const minuteDiv = minutes.map(el => {
         return (
-            <div className={s.hourdiv} onClick={()=>choiseMinute(el)}>{el}</div>
+            <div className={s.hourdiv} onClick={() => choiseMinute(el)}>{el}</div>
         )
-    })    
-    function choiseHour(h){
+    })
+    function choiseHour(h) {
         setHour(h);
         setIsHour(false)
     }
-    function choiseMinute(m){
+    function choiseMinute(m) {
         console.log(m)
         setMinute(m);
         setIsMinute(false);
-        props.time({h:hour,m:m})
+        props.time({ h: hour, m: m })
     }
-
     return (
         <div className={s.time}>
-        {!isHour&&!isMinute?
-            <div className={s.scoreboard}>
-            <div className={s.hour} onClick={() => {setIsHour(true) }}>
-                    {hour}
-                </div> 
-
-            <div>:</div>
-            <div className={s.minute} onClick={() => {setIsMinute(true) }}>{minute}</div>
-            </div>
-        :isHour?hoursDiv:minuteDiv}
-            
-            
-                
+            {!isHour && !isMinute ?
+                <div className={s.scoreboard}>
+                    <div className={s.hour} onClick={() => { setIsHour(true) }}>
+                        {hour}
+                    </div>
+                    <div>:</div>
+                    <div className={s.minute} onClick={() => { setIsMinute(true) }}>{minute}</div>
+                </div>
+                : isHour ? hoursDiv : minuteDiv}
         </div>
     )
 };

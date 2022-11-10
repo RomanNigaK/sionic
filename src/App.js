@@ -28,12 +28,9 @@ function App() {
   const categories = useSelector(state => category(state));
   const errorApp = useSelector(state => state.app.errorApp);
 
-
-
   useEffect(() => {
     satrtApp();
   }, []);
-
 
   async function satrtApp() {
     try {
@@ -51,8 +48,6 @@ function App() {
       dispatch(setErrorApp('Нет связи с сервером...'));
     }
   }
-
-
   return (
     <div className="App" >
       {listVarioations ? <ListVariations listVarioations={listVarioations} /> : null}
@@ -61,15 +56,13 @@ function App() {
           <Route path='/'
             element={initialApp ?
               <Catalog categories={categories}
-                idCategory={idCategory} /> : errorApp ? <Error text={errorApp} /> : <Preloader max text="Загружаем..."/>} />
+                idCategory={idCategory} /> : errorApp ? <Error text={errorApp} /> : <Preloader max text="Загружаем..." />} />
           <Route path='basket' element={<Basket />} />
           <Route path='delivery' element={<Delivery />} />
           <Route path='orders' element={<Order />} />
         </Route>
       </Routes>
-
     </div>
   );
 }
-
 export default App;

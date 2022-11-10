@@ -9,7 +9,6 @@ export const apiSionic = {
     async getProducts(idCategory, range, sort) {
         let s = range ? range[0] : 0;
         let q = range ? range[1] - 1 : 9;
-        console.log(sort)
         const res = await fetch(URL + `/Products?filter={"category_id":${idCategory}}&range=[${s},${q}]&sort=["${sort[0]}","${sort[1]}"]`);
 
         const data = await res.json();

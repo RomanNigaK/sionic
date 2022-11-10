@@ -61,8 +61,7 @@ const Delivery = () => {
 
     }
     useEffect(() => {
-        console.log('11111');
-        if (ordertOrm.length > orders) {
+          if (ordertOrm.length > orders) {
             setCreateOrder(true)
         }
     }, [ordertOrm])

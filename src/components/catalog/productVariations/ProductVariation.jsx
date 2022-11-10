@@ -3,7 +3,6 @@ import { useDispatch, useSelector } from "react-redux";
 import { setListVariation } from "../../../redux/appSlice";
 import { productVariationProperty, productVariationPropertyListValue, productsItems, productVariationPropertyValues, variationsProduct } from "../../../redux/orm/selectors";
 const ProductVariations = (props) => {
-    console.log(props.idProduct)
     const dispatch = useDispatch();
     class ListVariationsProduct {
         object = {
@@ -25,16 +24,13 @@ const ProductVariations = (props) => {
                     id: el.id,
                 })
             })
-            console.log(this.object)
+            
         }
         _specification(arr) {
-            console.log(arr)
-
-            let specification = {};
+         let specification = {};
             let id;
             arr.forEach(el => {
                 id = el.product_variation_id;
-                console.log(id);
                 let key = this.productVP.find(item => item.id === el.product_variation_property_id).name
                 specification[key] = el.value_string ?? el.value_int ?? el.value_float;
                 if (el.product_variation_property_list_value_id) {
